@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Demo gọi Api sử dụng Jquery Ajax</h1>
+    <br>
+    <button id="bt1">Gọi API</button>
+    <br>
+    <p id="log"></p>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $("#bt1").click(function () {
+            $.get("http://localhost:8080/demo-cors", function (data, status, xhr) {
+                alert("Data: " + data + "\nStatus: " + xhr.statusText);
+                $("#log").text(data);
+                console.log(xhr);
+            });
+        });
+    });
+</script>
+
+</html>
