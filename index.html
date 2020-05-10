@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <script async src="https://cse.google.com/cse.js?cx=010511306807271791464:edmzwa3hgtm"></script>
-<div class="gcse-search"></div>
-    <h1>Demo gọi Api sử dụng Jquery Ajax</h1>
-    <br>
-    <p>Test thu tim kiem Google! 171201776</p>   
-    <button id="bt1">Gọi API</button>
-    <br>
-    <p id="log"></p>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- <script>
-    $(function () {
-        $("#bt1").click(function () {
-            $.get("http://localhost:8080/demo-cors", function (data, status, xhr) {
-                alert("Data: " + data + "\nStatus: " + xhr.statusText);
-                $("#log").text(data);
-                console.log(xhr);
-            });
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
         });
-    });
-</script> -->
-
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEMaAm8oC4NX4fT3fu_WA_iGFW3Ouvp6o&callback=initMap"
+    async defer></script>
+  </body>
 </html>
